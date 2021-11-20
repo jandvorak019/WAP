@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>aaaa</title>
+</head>
+<style>
+body {background-color: powderblue;}
+h1 {
+  color: blue;
+  font-family: verdana;
+  font-size: 300%;
+}
+<div class="center">
+    Lorem ipsum
+</div>
+
+.center{
+    position:absolute;
+    height: X px;
+    width: Y px;
+    left:50%;
+    top:50%;
+    margin-top:- X/2 px;
+    margin-left:- Y/2 px;
+}
+p  {
+  color: ;
+  font-family: verdana
+  font-size: 100%
+}
+
+</style>
+<body>
+
+<h1>Hello this is a heading </h1>
+<h2>This is heading 2</h2>
+<h3>This is heading 3</h3>
+<h4This is heading 4</h4>
+<p>Hello there.</p>
+<a href="https://www.youtube.com/watch?v=GJDNkVDGM_s">This is a link</a>
+</body>
+</html>
