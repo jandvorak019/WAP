@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>a</title>
+</head>
+<body>
+<form name="frmMain" action="" method="post">
+<script language="JavaScript">
+
+	function addCommas(nStr)
+	{
+		nStr += '';
+		x = nStr.split('.');
+		x1 = x[0];
+		x2 = x.length > 1 ? '.' + x[1] : '';
+		x3 = x.length > 2 ? '.' + x[2] : '';
+		var rgx = /(\d+)(\d{3})/;
+		while (rgx.test(x1)) {
+			x1 = x1.replace(rgx, '$1' + ',' + '$2' + ','+ '$3');
+		}
+		return x1 + x2 + x3;
+	}
+
+	function fncSum()
+	{
+		 if(isNaN(document.frmMain.txtNumberA.value) || document.frmMain.txtNumberA.value == "")
+		 {
+			alert('(Věk)Prosím pište jenom čísla!');
+			document.frmMain.txtNumberA.focus();
+			return;
+		 }
+
+		 if(isNaN(document.frmMain.txtNumberB.value) || document.frmMain.txtNumberB.value == "")
+		 {
+			alert('(Knihy)Prosím pište jenom čísla!');
+			document.frmMain.txtNumberB.focus();
+			return;
+		 }
+
+		 var TotSum = (parseFloat(document.frmMain.txtNumberA.value) + parseFloat(document.frmMain.txtNumberB.value)).toFixed(2);
+		 document.frmMain.txtNumberC.value  = addCommas(TotSum);
+	}
+</script>
+Počet = <input type="text"name="txtNumberD" value=""><br>
+Věk <input type="text" name="txtNumberA" value=""> <br>
+Knihy <input type="text" name="txtNumberB" value=""> <br>
+sum = <input type="text" name="txtNumberC" value=""><br>
+<input type="button" name="btnSum" value="Sum" OnClick="fncSum();">
+</form>
+</body>
+</html>
